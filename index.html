@@ -51,6 +51,45 @@
             background-size: cover;
             background-position: center;
         }
+
+        /* ANIMACIÓN DEL CARRUSEL DE CLIENTES */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 10px 0;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 30s linear infinite;
+        }
+
+        .marquee-content img {
+            height: 60px; /* Altura estándar de los logos */
+            width: auto;
+            margin: 0 40px;
+            display: inline-block;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(60%);
+            transition: all 0.3s ease;
+        }
+
+        .marquee-content img:hover {
+            filter: grayscale(0%) opacity(100%);
+            transform: scale(1.05);
+        }
+
+        /* Pausar la animación si el usuario pone el mouse encima */
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Desplaza hasta la mitad porque duplicamos los logos */
+        }
     </style>
 </head>
 
@@ -110,7 +149,7 @@
                 <div class="absolute lg:right-10 z-20 w-56 md:w-64 h-[400px] md:h-[500px] bg-gray-900 border-[6px] md:border-[8px] border-gray-900 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden transform rotate-2 lg:rotate-2">
                     <img src="img/mockup_jugador.png" alt="App ServeMatch Jugadores" class="w-full h-full object-cover bg-brand-green" onerror="this.src='https://via.placeholder.com/300x600/113525/FFFFFF?text=App+Jugadores'">
                 </div>
-                <!-- Celular Trasero (App Admin - Oculto en móviles muy pequeños para no romper el diseño, visible en tablets/desktop) -->
+                <!-- Celular Trasero (App Admin) -->
                 <div class="hidden sm:block absolute sm:-left-4 lg:right-40 lg:left-auto top-10 z-10 w-56 md:w-64 h-[380px] md:h-[450px] bg-white border-[6px] md:border-[8px] border-gray-900 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden transform -rotate-6 md:-rotate-3 opacity-90 lg:opacity-100">
                     <img src="img/mockup_admin.png" alt="Panel Admin ServeMatch" class="w-full h-full object-cover bg-gray-100" onerror="this.src='https://via.placeholder.com/300x600/F3F4F6/0B2218?text=Panel+Admin'">
                 </div>
@@ -275,7 +314,7 @@
     </section>
 
     <!-- SECCIÓN PWA / APP -->
-    <section id="pwa" class="pwa-bg py-16 md:py-24 px-6 md:px-12 text-white border-b-8 border-brand-yellow relative">
+    <section id="pwa" class="pwa-bg py-16 md:py-24 px-6 md:px-12 text-white border-b-4 border-gray-100 relative">
         <div class="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
 
             <!-- Gráfico central/derecho con FONDO BLANCO PARA EL LOGO -->
@@ -313,8 +352,39 @@
         </div>
     </section>
 
+    <!-- SECCIÓN CLIENTES (CARRUSEL INFINITO) -->
+    <section class="py-12 bg-white border-b-8 border-brand-yellow relative">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-6">
+            <p class="text-sm font-bold text-gray-400 uppercase tracking-widest">Clubes que confían en nosotros</p>
+        </div>
+        
+        <div class="marquee-container relative">
+            <!-- Sombras laterales para difuminar la entrada y salida de los logos -->
+            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="marquee-content">
+                <!-- LOGOS DE CLUBES (Reemplaza los src con las rutas a los logos de tus clientes) -->
+                <img src="img/dmk.png" alt="DMK">
+                <img src="img/logo.png" alt="Cliente 2">
+                <img src="img/logo.png" alt="Cliente 3">
+                <img src="img/logo.png" alt="Cliente 4">
+                <img src="img/logo.png" alt="Cliente 5">
+                <img src="img/logo.png" alt="Cliente 6">
+                
+                <!-- IMPORTANTE: Duplicamos exactamente la misma lista de logos para que el loop sea infinito e invisible -->
+                <img src="img/dmk.png" alt="DMK">
+                <img src="img/logo.png" alt="Cliente 2">
+                <img src="img/logo.png" alt="Cliente 3">
+                <img src="img/logo.png" alt="Cliente 4">
+                <img src="img/logo.png" alt="Cliente 5">
+                <img src="img/logo.png" alt="Cliente 6">
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer class="bg-white py-12 px-6 border-t border-gray-200">
+    <footer class="bg-white py-12 px-6">
         <div class="max-w-7xl mx-auto flex flex-col items-center gap-6 text-center">
 
             <div class="flex items-center gap-2">
