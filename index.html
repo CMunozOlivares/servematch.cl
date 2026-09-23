@@ -9,8 +9,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -25,8 +24,7 @@
                         'brand-gray': '#F3F4F6'
                     },
                     fontFamily: {
-                        'sans': ['Poppins', 'sans-serif'],
-                        'script': ['"Caveat"', 'cursive']
+                        'sans': ['Poppins', 'sans-serif']
                     }
                 }
             }
@@ -35,7 +33,7 @@
     <style>
         .hero-bg {
             background-color: #0B2218;
-            background-image: linear-gradient(to right, rgba(11, 34, 24, 0.95) 40%, rgba(11, 34, 24, 0.4)), url('https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(to right, rgba(11, 34, 24, 0.95) 40%, rgba(11, 34, 24, 0.6)), url('https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -56,7 +54,7 @@
     </style>
 </head>
 
-<body class="font-sans text-gray-800 antialiased bg-white">
+<body class="font-sans text-gray-800 antialiased bg-white overflow-x-hidden">
 
     <!-- NAVBAR -->
     <header class="bg-brand-dark text-white py-4 px-6 md:px-12 sticky top-0 z-50 shadow-md">
@@ -68,7 +66,7 @@
             </div>
 
             <!-- Links (Hidden on mobile) -->
-            <nav class="hidden md:flex gap-8 font-medium text-sm items-center">
+            <nav class="hidden lg:flex gap-8 font-medium text-sm items-center">
                 <a href="#" class="text-brand-yellow border-b-2 border-brand-yellow pb-1">Inicio</a>
                 <a href="#caracteristicas" class="hover:text-brand-yellow transition">Características</a>
                 <a href="#pwa" class="hover:text-brand-yellow transition">Tecnología PWA</a>
@@ -76,48 +74,48 @@
             </nav>
 
             <!-- CTA Button SaaS -->
-            <a href="https://servematch.javsof.cl/seleccionar_club.php" class="bg-brand-yellow text-brand-dark px-5 py-2.5 rounded-full font-bold text-sm hover:bg-yellow-400 transition flex items-center gap-2 shadow-md">
-                <i class="fa-regular fa-user"></i> Ingresar a mi Club
+            <a href="https://servematch.javsof.cl/seleccionar_club.php" class="bg-brand-yellow text-brand-dark px-4 py-2 md:px-5 md:py-2.5 rounded-full font-bold text-sm hover:bg-yellow-400 transition flex items-center gap-2 shadow-md whitespace-nowrap">
+                <i class="fa-regular fa-user"></i> <span class="hidden sm:inline">Ingresar a mi Club</span><span class="sm:hidden">Ingresar</span>
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-bg text-white py-20 px-6 md:px-12 overflow-hidden relative">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section class="hero-bg text-white py-16 md:py-24 px-6 md:px-12 relative">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
             <!-- Texto Izquierda -->
-            <div class="space-y-6 z-10">
-                <p class="text-brand-yellow font-semibold tracking-wider text-sm uppercase">Plataforma Todo en Uno</p>
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-                    El sistema inteligente <br> <span class="text-brand-yellow">para tu club</span>
+            <div class="lg:w-1/2 space-y-6 z-10 text-center lg:text-left">
+                <p class="text-brand-yellow font-semibold tracking-wider text-xs md:text-sm uppercase">Plataforma Todo en Uno</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+                    El sistema inteligente <br class="hidden lg:block"> <span class="text-brand-yellow">para tu club</span>
                 </h1>
-                <p class="text-gray-300 text-lg max-w-lg">
+                <p class="text-gray-300 text-base md:text-lg max-w-lg mx-auto lg:mx-0">
                     La plataforma SaaS integral para clubes de tenis y pádel. Automatiza tu agenda, gestiona pagos, organiza torneos y fideliza a tu comunidad desde una sola App.
                 </p>
-                <div class="flex flex-wrap items-center gap-4 pt-4">
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
                     <a href="https://servematch.javsof.cl/seleccionar_club.php"
-                        class="bg-brand-yellow text-brand-dark px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition flex items-center gap-2">
+                        class="bg-brand-yellow text-brand-dark w-full sm:w-auto px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition flex items-center justify-center gap-2 text-center">
                         <i class="fa-regular fa-user"></i> Ingresar a mi Club
                     </a>
                     <a href="#caracteristicas"
-                        class="text-white hover:text-brand-yellow transition flex items-center gap-2 font-medium">
+                        class="text-white hover:text-brand-yellow transition flex items-center justify-center gap-2 font-medium w-full sm:w-auto py-3">
                         Conoce el sistema <i class="fa-regular fa-circle-right"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Mockups Derecha (Imágenes reales) -->
-            <div class="relative hidden md:block h-[500px]">
+            <!-- Mockups Derecha (Responsive) -->
+            <div class="lg:w-1/2 w-full flex justify-center lg:justify-end relative mt-10 lg:mt-0 h-[400px] md:h-[500px]">
                 <!-- Celular Frontal (App Jugador) -->
-                <div class="absolute right-10 top-0 w-64 h-[500px] bg-gray-900 border-[8px] border-gray-900 rounded-[2.5rem] shadow-2xl overflow-hidden transform rotate-2">
+                <div class="absolute lg:right-10 z-20 w-56 md:w-64 h-[400px] md:h-[500px] bg-gray-900 border-[6px] md:border-[8px] border-gray-900 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden transform rotate-2 lg:rotate-2">
                     <img src="img/mockup_jugador.png" alt="App ServeMatch Jugadores" class="w-full h-full object-cover bg-brand-green" onerror="this.src='https://via.placeholder.com/300x600/113525/FFFFFF?text=App+Jugadores'">
                 </div>
-                <!-- Celular Trasero (App Admin) -->
-                <div class="absolute right-40 top-12 w-64 h-[450px] bg-white border-[8px] border-gray-900 rounded-[2.5rem] shadow-2xl overflow-hidden transform -rotate-3 -z-10">
+                <!-- Celular Trasero (App Admin - Oculto en móviles muy pequeños para no romper el diseño, visible en tablets/desktop) -->
+                <div class="hidden sm:block absolute sm:-left-4 lg:right-40 lg:left-auto top-10 z-10 w-56 md:w-64 h-[380px] md:h-[450px] bg-white border-[6px] md:border-[8px] border-gray-900 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden transform -rotate-6 md:-rotate-3 opacity-90 lg:opacity-100">
                     <img src="img/mockup_admin.png" alt="Panel Admin ServeMatch" class="w-full h-full object-cover bg-gray-100" onerror="this.src='https://via.placeholder.com/300x600/F3F4F6/0B2218?text=Panel+Admin'">
                 </div>
                 <!-- Adorno -->
-                <div class="absolute bottom-10 right-0 text-brand-yellow text-6xl shadow-xl rounded-full bg-brand-dark leading-none p-1 z-20">
+                <div class="absolute bottom-4 right-4 md:bottom-10 md:-right-5 text-brand-yellow text-5xl md:text-6xl shadow-xl rounded-full bg-brand-dark leading-none p-1 z-30 hidden sm:block">
                     <i class="fa-solid fa-baseball"></i>
                 </div>
             </div>
@@ -125,62 +123,62 @@
     </section>
 
     <!-- CARACTERÍSTICAS RÁPIDAS (Íconos) -->
-    <section class="py-12 bg-white px-6 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center divide-x divide-gray-100">
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+    <section class="py-10 bg-white px-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 text-center lg:divide-x lg:divide-gray-100">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-regular fa-calendar-check"></i></div>
-                <h3 class="font-bold text-sm">Agenda Inteligente</h3>
-                <p class="text-xs text-gray-500">Reservas 24/7 sin dobleteo.</p>
+                <h3 class="font-bold text-xs md:text-sm">Agenda Inteligente</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Reservas 24/7 sin dobleteo.</p>
             </div>
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-solid fa-credit-card"></i></div>
-                <h3 class="font-bold text-sm">Cobros Online</h3>
-                <p class="text-xs text-gray-500">Integración con Mercado Pago.</p>
+                <h3 class="font-bold text-xs md:text-sm">Cobros Online</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Integración con Mercado Pago.</p>
             </div>
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-solid fa-sitemap"></i></div>
-                <h3 class="font-bold text-sm">Cuadros y Ligas</h3>
-                <p class="text-xs text-gray-500">Torneos y americanos automáticos.</p>
+                <h3 class="font-bold text-xs md:text-sm">Cuadros y Ligas</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Torneos y americanos.</p>
             </div>
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-solid fa-ranking-star"></i></div>
-                <h3 class="font-bold text-sm">Ranking Puntos</h3>
-                <p class="text-xs text-gray-500">Tabla de posiciones en tiempo real.</p>
+                <h3 class="font-bold text-xs md:text-sm">Ranking Puntos</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Tabla en tiempo real.</p>
             </div>
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-solid fa-satellite-dish"></i></div>
-                <h3 class="font-bold text-sm">Radar Matchmaker</h3>
-                <p class="text-xs text-gray-500">Jugadores buscando rivales.</p>
+                <h3 class="font-bold text-xs md:text-sm">Radar Matchmaker</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Buscador de rivales.</p>
             </div>
-            <div class="flex flex-col items-center gap-3 p-4">
-                <div class="w-14 h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-2xl">
+            <div class="flex flex-col items-center gap-2 p-2">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-green text-brand-yellow rounded-xl flex items-center justify-center text-xl md:text-2xl">
                     <i class="fa-solid fa-chalkboard-user"></i></div>
-                <h3 class="font-bold text-sm">Academia</h3>
-                <p class="text-xs text-gray-500">Gestión de profesores y clases.</p>
+                <h3 class="font-bold text-xs md:text-sm">Academia</h3>
+                <p class="text-[10px] md:text-xs text-gray-500">Gestión de profesores.</p>
             </div>
         </div>
     </section>
 
     <!-- ARQUITECTURA INTEGRAL SAAS -->
-    <section id="caracteristicas" class="py-20 px-6 md:px-12 bg-gray-50">
+    <section id="caracteristicas" class="py-16 md:py-20 px-6 md:px-12 bg-gray-50">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
 
             <!-- Título Izquierda -->
-            <div class="lg:w-1/3 space-y-4 sticky top-24 self-start">
+            <div class="lg:w-1/3 space-y-4 lg:sticky lg:top-24 self-start text-center lg:text-left">
                 <p class="text-gray-400 font-semibold tracking-wider text-sm uppercase">Ecosistema Integral</p>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight">
-                    Todo lo que <br> <span class="text-brand-yellow drop-shadow-sm" style="color: #abc916;">tu club necesita</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight">
+                    Todo lo que <br class="hidden lg:block"> <span class="text-brand-yellow drop-shadow-sm" style="color: #abc916;">tu club necesita</span>
                 </h2>
-                <p class="text-gray-600 text-sm">
-                    Una solución completa diseñada para simplificar la administración, potenciar la competencia y fidelizar a tu comunidad. Olvídate de usar múltiples herramientas; centraliza toda la gestión de tu recinto en ServeMatch.
+                <p class="text-gray-600 text-sm md:text-base">
+                    Una solución completa diseñada para simplificar la administración, potenciar la competencia y fidelizar a tu comunidad. Centraliza toda la gestión de tu recinto en ServeMatch.
                 </p>
                 <a href="#"
-                    class="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-2 rounded-full font-semibold hover:bg-brand-dark hover:text-white transition mt-4">
+                    class="inline-flex items-center justify-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-2.5 rounded-full font-semibold hover:bg-brand-dark hover:text-white transition mt-4 w-full sm:w-auto">
                     Hablar con un asesor <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
@@ -189,62 +187,62 @@
             <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- Operativo -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-brand-dark hover:shadow-lg transition">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-brand-dark hover:shadow-lg transition">
                     <div class="flex justify-between items-start mb-4">
                         <i class="fa-solid fa-gear text-3xl text-brand-dark"></i>
                     </div>
                     <h4 class="font-bold text-xl text-gray-800 mb-2">Gestión Administrativa</h4>
                     <p class="text-sm text-gray-500 mb-4">El corazón operativo de tu club. Control total del recinto desde la palma de tu mano.</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Agenda visual e interactiva por canchas</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Cobros online automáticos y división de pagos</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Base de datos de jugadores y CRM deportivo</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Reglas de bloqueo por encendido de luces</li>
+                    <ul class="text-sm text-gray-600 space-y-2.5">
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Agenda visual e interactiva por canchas</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Cobros online automáticos y división de pagos</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Base de datos de jugadores y CRM deportivo</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Reglas de bloqueo por encendido de luces</li>
                     </ul>
                 </div>
 
                 <!-- Deportivo -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-brand-yellow hover:shadow-lg transition">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-brand-yellow hover:shadow-lg transition">
                     <div class="flex justify-between items-start mb-4">
                         <i class="fa-solid fa-trophy text-3xl text-brand-yellow" style="color: #abc916;"></i>
                     </div>
                     <h4 class="font-bold text-xl text-gray-800 mb-2">Gestión Deportiva</h4>
                     <p class="text-sm text-gray-500 mb-4">Automatiza tus eventos, ligas y recauda inscripciones en piloto automático.</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Ligas regulares con fase de grupos y PlayOffs</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Torneos Americanos y cuadros de eliminación</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Cruce inteligente de disponibilidad horaria</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Carga de resultados por parte de los jugadores</li>
+                    <ul class="text-sm text-gray-600 space-y-2.5">
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Ligas regulares con fase de grupos y PlayOffs</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Torneos Americanos y cuadros de eliminación</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Cruce inteligente de disponibilidad horaria</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Carga de resultados por parte de los jugadores</li>
                     </ul>
                 </div>
 
                 <!-- Comunidad -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-blue-500 hover:shadow-lg transition">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-blue-500 hover:shadow-lg transition">
                     <div class="flex justify-between items-start mb-4">
                         <i class="fa-solid fa-gamepad text-3xl text-blue-500"></i>
                     </div>
                     <h4 class="font-bold text-xl text-gray-800 mb-2">Comunidad y Retención</h4>
                     <p class="text-sm text-gray-500 mb-4">Gamificación y herramientas sociales para que tus jugadores nunca dejen de arrendar.</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Radar Matchmaker (Buscador de rivales y partners)</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Sistema de Misiones, Logros y Puntos de Experiencia</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Ranking general histórico por categorías</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Estadísticas completas y Head-to-Head</li>
+                    <ul class="text-sm text-gray-600 space-y-2.5">
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Radar Matchmaker (Buscador de rivales y partners)</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Misiones, Logros y Puntos de Experiencia</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Ranking general histórico por categorías</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Estadísticas completas y Head-to-Head</li>
                     </ul>
                 </div>
 
                 <!-- Finanzas -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-purple-500 hover:shadow-lg transition">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 border-t-4 border-t-purple-500 hover:shadow-lg transition">
                     <div class="flex justify-between items-start mb-4">
                         <i class="fa-solid fa-users-viewfinder text-3xl text-purple-500"></i>
                     </div>
                     <h4 class="font-bold text-xl text-gray-800 mb-2">Academia y Membresías</h4>
                     <p class="text-sm text-gray-500 mb-4">Herramientas financieras avanzadas para rentabilizar las clases y los socios frecuentes.</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Gestión de Suscripciones y Membresías VIP</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Catálogo de profesores y agendamiento de clases</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Tarifas diferenciadas de arriendo (Socio vs General)</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Descuentos automatizados en inscripciones</li>
+                    <ul class="text-sm text-gray-600 space-y-2.5">
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Gestión de Suscripciones y Membresías VIP</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Catálogo de profesores y agendamiento de clases</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Tarifas diferenciadas de arriendo (Socio vs General)</li>
+                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-green-500 mt-1"></i> Descuentos automatizados en inscripciones</li>
                     </ul>
                 </div>
 
@@ -253,64 +251,62 @@
     </section>
 
     <!-- COMUNIDAD -->
-    <section class="community-bg text-white py-20 px-6 md:px-12 relative">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 space-y-6 z-10">
+    <section class="community-bg text-white py-16 md:py-24 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="md:w-1/2 space-y-6 z-10 text-center md:text-left">
                 <p class="text-brand-yellow font-semibold tracking-wider text-sm uppercase">Identidad de Marca</p>
-                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
                     Tu propio logo,<br> <span class="text-brand-yellow">tu propia esencia</span>
                 </h2>
-                <p class="text-gray-300 text-base max-w-md">
-                    ServeMatch funciona como un motor invisible. Tus jugadores entrarán a una plataforma personalizada
-                    con los colores y el logotipo de tu club, generando pertenencia e identidad en todo momento.
+                <p class="text-gray-300 text-sm md:text-base max-w-md mx-auto md:mx-0">
+                    ServeMatch funciona como un motor invisible. Tus jugadores entrarán a una plataforma personalizada con los colores y el logotipo de tu club, generando pertenencia e identidad en todo momento.
                 </p>
             </div>
 
             <!-- Texto Flotante -->
-            <div class="md:w-1/2 flex justify-end mt-12 md:mt-0 z-10">
-                <div class="transform -rotate-6 text-right">
-                    <h3 class="text-4xl md:text-5xl font-bold font-serif italic text-white shadow-sm">Autonomía</h3>
-                    <h3 class="text-4xl md:text-5xl font-bold font-serif italic text-white shadow-sm">Tecnología</h3>
-                    <h3 class="text-4xl md:text-5xl font-bold font-serif italic text-brand-yellow shadow-sm">Prestigio</h3>
+            <div class="md:w-1/2 flex justify-center md:justify-end z-10 w-full">
+                <div class="transform -rotate-6 text-center md:text-right bg-brand-green/40 p-6 md:p-8 rounded-3xl backdrop-blur-sm border border-brand-green">
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif italic text-white shadow-sm mb-2">Autonomía</h3>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif italic text-white shadow-sm mb-2">Tecnología</h3>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif italic text-brand-yellow shadow-sm">Prestigio</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN PWA / APP -->
-    <section id="pwa" class="pwa-bg py-20 px-6 md:px-12 text-white border-b-8 border-brand-yellow">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="pwa" class="pwa-bg py-16 md:py-24 px-6 md:px-12 text-white border-b-8 border-brand-yellow relative">
+        <div class="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
 
-            <div class="space-y-6 z-10">
-                <p class="text-brand-yellow font-semibold tracking-wider text-sm uppercase">App PWA</p>
-                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                    Cero fricción, <br> <span class="text-brand-yellow">cero descargas</span>
-                </h2>
-                <p class="text-gray-300 text-sm max-w-sm">
-                    Construido con tecnología PWA de última generación. Tus jugadores solo tocan un enlace y la
-                    aplicación se instala en la pantalla de inicio de su iPhone o Android instantáneamente.
-                </p>
-
-                <div class="grid grid-cols-2 gap-4 pt-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-bolt text-brand-yellow mt-1"></i>
-                        <p class="text-xs text-gray-300">Carga instantánea <br>sin App Store</p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fa-solid fa-bell text-brand-yellow mt-1"></i>
-                        <p class="text-xs text-gray-300">Notificaciones Push<br>en tiempo real</p>
-                    </div>
-                    <div class="flex items-start gap-3 col-span-2">
-                        <i class="fa-solid fa-mobile-screen text-brand-yellow mt-1"></i>
-                        <p class="text-xs text-gray-300">Interfaz nativa fluida <br>para iOS y Android</p>
-                    </div>
+            <!-- Gráfico central/derecho con FONDO BLANCO PARA EL LOGO -->
+            <div class="flex justify-center md:justify-start lg:justify-center relative z-10 w-full mt-10 md:mt-0">
+                <div class="bg-white p-6 md:p-8 rounded-full border-4 md:border-[6px] border-brand-yellow w-48 h-48 md:w-64 md:h-64 flex flex-col items-center justify-center text-center shadow-2xl relative transition hover:scale-105 duration-300">
+                    <img src="img/logo.png" alt="Logo ServeMatch" class="w-32 h-32 md:w-48 md:h-48 object-contain">
                 </div>
             </div>
 
-            <!-- Gráfico central/derecho con FONDO BLANCO PARA EL LOGO -->
-            <div class="flex justify-center md:justify-end relative z-10">
-                <div class="bg-white p-8 rounded-full border-4 border-brand-yellow w-64 h-64 flex flex-col items-center justify-center text-center shadow-2xl relative">
-                    <img src="img/logo.png" alt="Logo ServeMatch" class="w-48 h-48 object-contain">
+            <div class="space-y-6 z-10 text-center md:text-left">
+                <p class="text-brand-yellow font-semibold tracking-wider text-sm uppercase">App PWA</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                    Cero fricción, <br> <span class="text-brand-yellow">cero descargas</span>
+                </h2>
+                <p class="text-gray-300 text-sm md:text-base max-w-md mx-auto md:mx-0">
+                    Construido con tecnología PWA de última generación. Tus jugadores solo tocan un enlace y la aplicación se instala en la pantalla de inicio de su iPhone o Android instantáneamente.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-left">
+                    <div class="flex items-start gap-3 bg-brand-dark/50 p-3 rounded-lg border border-gray-700">
+                        <i class="fa-solid fa-bolt text-brand-yellow mt-1 text-lg"></i>
+                        <p class="text-xs md:text-sm text-gray-300">Carga instantánea <br>sin App Store</p>
+                    </div>
+                    <div class="flex items-start gap-3 bg-brand-dark/50 p-3 rounded-lg border border-gray-700">
+                        <i class="fa-solid fa-bell text-brand-yellow mt-1 text-lg"></i>
+                        <p class="text-xs md:text-sm text-gray-300">Notificaciones Push<br>en tiempo real</p>
+                    </div>
+                    <div class="flex items-start gap-3 sm:col-span-2 bg-brand-dark/50 p-3 rounded-lg border border-gray-700">
+                        <i class="fa-solid fa-mobile-screen text-brand-yellow mt-1 text-lg"></i>
+                        <p class="text-xs md:text-sm text-gray-300">Interfaz nativa fluida para iOS y Android</p>
+                    </div>
                 </div>
             </div>
 
@@ -346,5 +342,4 @@
     </footer>
 
 </body>
-
 </html>
